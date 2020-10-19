@@ -10,6 +10,14 @@ courseData = [{"courseID":"1111","title":"PHP 101","description":"Intro to PHP",
 def index():
     return render_template("index.html",index = True )
 
+
+#***************************************************************************************************************#
+
+#----------------------------- Startupgarage Ventures assignments-----------------------------------------------#
+
+#***************************************************************************************************************#
+
+
 @app.route("/login", methods=['GET','POST'])
 def login():
     form = LoginForm()
@@ -31,6 +39,16 @@ def login():
 def course(term="Spring 2020"):
     return render_template("course.html",courseData = courseData , course = True, term = term)
 
+
+
+
+#***************************************************************************************************************#
+
+#----------------------------- Startupgarage Ventures assignments-----------------------------------------------#
+
+#***************************************************************************************************************#
+
+
 @app.route("/register",methods=['POST','GET'])
 def register():
     form = RegisterForm()
@@ -45,7 +63,7 @@ def register():
         user = User(user_id = user_id, email = email, first_name = first_name, last_name = last_name)
         # user.check_password_hash(password)
         # user.save()
-        print("..................-----------------------------")
+        print("..................-Startupgarage Ventures assignments----------------------------")
         print("..................",user_id)
         print("..................",form.email.data)
         print("..................",form.password.data )
